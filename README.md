@@ -1,50 +1,54 @@
-﻿# Rock vs Mine Prediction
+# Rock vs Mine Prediction
 
-A beginner-friendly sonar signal classification project that uses logistic regression to identify whether an underwater object is a rock (`R`) or a mine (`M`). The project is implemented in `Untitled-1.ipynb` and uses `sonardata.csv` as the dataset.
+A simple beginner ML project that uses logistic regression to predict whether an underwater object is a rock (`R`) or a mine (`M`) using sonar signal data. The whole project is done in `Untitled-1.ipynb` and uses `sonardata.csv` as the dataset.
 
-## Project overview
+## Project Overview
 
-- `Untitled-1.ipynb`: Jupyter notebook for loading data, training a model, evaluating performance, and predicting a sample sonar signal.
-- `sonardata.csv`: Raw sonar dataset with 60 numeric features and a label column.
-- `README.md`: This project documentation.
+* `Untitled-1.ipynb` → Jupyter notebook where the data is loaded, the model is trained, tested, and used for prediction
+* `sonardata.csv` → Dataset containing sonar signal values
+* `README.md` → Documentation for the project
 
-## Dataset details
+## Dataset Details
 
-The dataset contains sonar returns from objects detected underwater:
-- 60 numeric feature columns representing sonar signal strengths
-- final column is the label: `R` for rock, `M` for mine
+The dataset contains sonar signals from underwater objects:
 
-## What the notebook does
+* 60 numerical feature columns representing sonar signal strengths
+* Last column contains the label:
 
-1. Imports `numpy`, `pandas`, and scikit-learn tools
-2. Loads `sonardata.csv` into a pandas DataFrame
-3. Inspects the dataset with `head()`, `shape`, and `describe()`
-4. Checks label distribution and mean feature values by class
-5. Splits data into features (`X`) and target labels (`Y`)
-6. Uses `train_test_split` to create training and test sets
-7. Trains a `LogisticRegression` model on the training set
-8. Evaluates accuracy on both training and test sets
-9. Classifies a sample input signal as rock or mine
+  * `R` = Rock
+  * `M` = Mine
+
+## What the Notebook Does
+
+1. Imports `numpy`, `pandas`, and scikit-learn libraries
+2. Loads `sonardata.csv` using pandas
+3. Checks the dataset using `head()`, `shape`, and `describe()`
+4. Looks at label distribution and average values for each class
+5. Separates features (`X`) and labels (`Y`)
+6. Splits the dataset into training and testing sets
+7. Trains a `LogisticRegression` model
+8. Checks accuracy on both training and testing data
+9. Predicts whether a sample sonar signal is a rock or mine
 
 ## Requirements
 
-- Python 3.x
-- Jupyter Notebook
-- pandas
-- numpy
-- scikit-learn
+* Python 3.x
+* Jupyter Notebook
+* pandas
+* numpy
+* scikit-learn
 
-## How to run
+## How to Run
 
-1. Open `Untitled-1.ipynb` in Jupyter Notebook or JupyterLab.
-2. Ensure `sonardata.csv` is in the same folder.
-3. Run all notebook cells in order.
+1. Open `Untitled-1.ipynb` in Jupyter Notebook or JupyterLab
+2. Make sure `sonardata.csv` is in the same folder
+3. Run all the cells one by one
 
-## Notes and recommendations
+## Notes
 
-- The current model is a simple baseline using logistic regression.
-- You can improve this project by adding feature scaling, cross-validation, or alternative classifiers like SVM, Random Forest, or Gradient Boosting.
-- For better model evaluation, consider using a validation set and metrics such as precision, recall, and confusion matrix.
+* Right now the project uses a simple logistic regression model as a baseline.
+* It can be improved by adding feature scaling, cross-validation, or trying models like SVM, Random Forest, or Gradient Boosting.
+* You can also use metrics like precision, recall, and confusion matrix for better evaluation.
 
 ## License
 
